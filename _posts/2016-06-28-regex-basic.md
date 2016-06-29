@@ -1,6 +1,6 @@
 ---
 title:  Regex Basic
-author: Albert
+author: fengxw
 ---
 
 This regex base on php syntax

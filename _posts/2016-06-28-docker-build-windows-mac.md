@@ -7,7 +7,7 @@ author: fengxw
 
 ---
 
-####Docker安装
+### Docker安装
 * 登录daocloud.io下载docker toolbox工具包并安装
 * 运行Docker Quickerstart Terminal快捷方式启动虚拟机。*第一次启动，会自动下载最新版本的boot2docker镜像，并生成名为default的虚拟机*
 * 运行命令`docker-machine ssh default`进入docker虚拟机
@@ -25,7 +25,7 @@ author: fengxw
         $ curl -sSL https://get.daocloud.io/daomonit/install.sh | sh -s a702bb3c4b4f7bec72df4776fa2c54effb76a3f1
 至此，docker基本运行环境搭建完毕。
 
-####搭建开发环境
+### 搭建开发环境
 下面以php的web开发环境为例，搭建docker下的开发环境
 
 * 在宿主机的映射的共享目录中创建Dockerfiles文件夹，保存事先准备好的dockerfile文件。至于如何配置dockerfile文件，可以参考[dockerfile文件配置](http://)。

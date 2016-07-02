@@ -7,36 +7,37 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
 
 ---
 
-1. 安装[lnmp][1]环境或[vagrant][2]开发环境
+1. 安装[lnmp](http://www.lnmp.org/)环境或[vagrant](https://www.vagrantup.com)开发环境
 
-2. 下载最新的[symfony安装包][3]
+2. 下载最新的[symfony安装包](https://symfony.com/download)
+
     ```
     sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
     sudo chmod a+x /usr/local/bin/symfony 
     symfony new project
     ```
     
-3. 下载最新[composer安装包][4]
+3. 下载最新[composer安装包](http://www.phpcomposer.com/)
+
     ```
     curl -sS https://getcomposer.org/installer | php
     mv composer.phar /usr/local/bin/composer
     ```
     
 4. 安装相关bundle
-* FOSRestBundle 
+        * FOSRestBundle 
            - `composer require friendsofsymfony/rest-bundle`（网络不好时，可以先在composer.json文件中添加 `"friendsofsymfony/rest-bundle": "^1.7", `然后运行`composer update nothing`, 再运行`composer install`）
 
            - 在app/AppKernel.php file中添加 `new FOS\RestBundle\FOSRestBundle(),`
 
            - 在app/config/config.yml->framework 启用serializer属性
+
            ```
             serializer:
                 enable_annotations:true
             ```
             
            - 在app/config/config.yml添加如下配置
-           - asd
-           
            
            ```
             fos_rest:
@@ -53,6 +54,7 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
             ```
             
            - 在app/config/routing.yml设置prefix，例子如下：
+
             ```
             clash_api:
                 resource: "@ClashApiBundle/Resources/config/routing.yml"
@@ -95,6 +97,7 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
 7. 返回json view的几种方式：
     * GET 方法通过查询直接获取对象时，可以通过系列化的方式，返回特定的字段。
         - 现在entity中设置好需要返回的字段
+
         ```
         /**
          * @ORM\Entity()
@@ -128,6 +131,7 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
         ```
         
         - 在对应的class里 `use FOS\RestBundle\View\View;` 在function的上方添加注释，例子如下：
+
         ```
         /**
          * @Annotations\View(serializerGroups={"Default", "ManyPosts"})
@@ -140,6 +144,7 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
         ```
         
 * POST/PUT/PATCH等方法返回自定义view时，不用注释，在return构建自定义view，例子如下：
+
     ```
     return $this->handleView(
         new View(

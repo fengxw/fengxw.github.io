@@ -12,9 +12,9 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
 2. 下载最新的[symfony安装包](https://symfony.com/download)
 
     ```
-    sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
-    sudo chmod a+x /usr/local/bin/symfony 
-    symfony new project
+    	sudo curl -LsS https://symfony.com/installer -o /usr/local/bin/symfony
+    	sudo chmod a+x /usr/local/bin/symfony 
+    	symfony new project
     ```
     
 3. 下载最新[composer安装包](http://www.phpcomposer.com/)
@@ -25,7 +25,8 @@ Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过
     ```
     
 4. 安装相关bundle
-        * FOSRestBundle 
+
+* FOSRestBundle 
            - `composer require friendsofsymfony/rest-bundle`（网络不好时，可以先在composer.json文件中添加 `"friendsofsymfony/rest-bundle": "^1.7", `然后运行`composer update nothing`, 再运行`composer install`）
 
            - 在app/AppKernel.php file中添加 `new FOS\RestBundle\FOSRestBundle(),`

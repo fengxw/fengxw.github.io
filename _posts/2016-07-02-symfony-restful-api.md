@@ -3,7 +3,8 @@ title:  Symfony 搭建RESTful API 项目
 author: fengxw
 ---
 
-Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过引用不同的bunle来构建我们的项目。其中最流行的就是构建RESTful API。
+Symfony 是一系列可复用的PHP组件结合的Web后台框架，可以通过引用不同的bundle来构建我们的项目。其中最流行的就是构建RESTful API。
+
 ---
 
 1. 安装[lnmp][1]环境或[vagrant][2]开发环境

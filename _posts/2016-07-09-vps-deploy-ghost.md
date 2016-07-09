@@ -1,12 +1,10 @@
 ---
-title:  Linux 给文件及文件夹附权限
+title: VPS部署Ghost 
 author: fengxw
 ---
 
-Linux 经常需要对文件或文件夹赋予各种级别的权限，可是规则呢？怎么加呢？
----
-
 本文基础环境为DigitalOcean Droplet下的centos
+---
 
 ### 安装Ghost
 
@@ -74,6 +72,7 @@ yum install -y mysql-server mysql mysql-devel
 在mysql内新建一个名为ghost的数据库
 
 在ghost根目录找到config.js,将production下的database替换成以下内容：
+
 ```
   database: {
     client: 'mysql',

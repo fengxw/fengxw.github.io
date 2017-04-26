@@ -31,7 +31,7 @@ pm2 status ghost 查看ghost进程状态
 ### 安装 nginx
 
 ```
-$ sudo apt-get install nginx
+sudo apt-get install nginx
 ```
 
 这个命令将会安装nginx并且设定好所有必需的目录和基础配置。
@@ -53,12 +53,10 @@ access_log /home/wwwlogs/access.example.com.log  access;
 }
 ```
 
-将 server_name 的值改为你的域名
-
-重启 nginx
+将 server_name 的值改为你的域名,重启nginx
 
 ```
-$ sudo service nginx restart
+sudo service nginx restart
 ```
 
 ### 更改默认数据库
@@ -66,26 +64,27 @@ $ sudo service nginx restart
 ghost默认数据库为sqlite3，我们可以替其换成更安全的mysql来存储数据。
 
 ## 安装 mysql
+
 ```
 yum install -y mysql-server mysql mysql-devel
 ```
+
 在mysql内新建一个名为ghost的数据库
 
 在ghost根目录找到config.js,将production下的database替换成以下内容：
 
 ```
-  database: {
-    client: 'mysql',
-    connection: {
-        host: 'localhost',
-        user: 'root',
-        password: 'your password',
-        database: 'ghost',
-        charset: 'utf8'
-    },
+database: {
+client: 'mysql',
+connection: {
+    host: 'localhost',
+    user: 'root',
+    password: 'your password',
+    database: 'ghost',
+    charset: 'utf8'
+},
 ```
-tips:
-前面提到的nginx和mysql都可以利用lnmp包一键安装，可以点击这里查看
+**`Tips: nginx和mysql都可以利用lnmp包一键安装，可以点击这里查看`**
 
 ### 参考文章
-[http://docs.ghost.org/zh/installation/deploy/#开始-ghost-之旅-](http://docs.ghost.org/zh/installation/deploy/#开始-ghost-之旅-)
+[开始 Ghost 之旅](http://docs.ghost.org/zh/installation/deploy/#开始-ghost-之旅-)

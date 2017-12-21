@@ -53,6 +53,10 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-remote-theme
+  
 include:
   - .htaccess
 exclude:
@@ -78,3 +82,4 @@ exclude:
   - package.json
   - spec
   - tmp
+  - .idea

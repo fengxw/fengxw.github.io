@@ -30,6 +30,10 @@ timezone:    America/New_York
 future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
+remote_theme: "mmistakes/minimal-mistakes"
+plugins:
+  - jekyll-remote-theme
+
 gems:
   - jekyll-sitemap
   - jekyll-paginate
@@ -53,10 +57,6 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-remote_theme: "mmistakes/minimal-mistakes"
-plugins:
-  - jekyll-remote-theme
-  
 include:
   - .htaccess
 exclude:

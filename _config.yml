@@ -1,41 +1,80 @@
 title: Intelligence of Stars
-email: feng235ping@gmail.com
-description: 'And God said, Let there be light:and there was light.'
+description: 'And God said, Let there be light: and there was light.'
+disqus_shortname:
+reading_time:     true
+words_per_minute: 200
+# Your site's domain goes here (eg: https://mmistakes.github.io, http://yourdomain.com, etc)
+# When testing locally leave blank or use http://localhost:4000
 url: 'http://onlyfeng.com'
-github_username: fengxw
-future: true
-excerpt_separator: '---'
+
+# Owner/author information
+owner:
+  name: Albert Feng
+  avatar: avatar.jpg
+  bio: "And God said, Let there be light: and there was light."
+  email: feng235ping@gmail.com
+  # Social networking links used in footer. Update and remove as you like.
+  github: fengxw
+
+# Background image to be tiled on all pages
+background:
+
+# Analytics and webmaster tools stuff goes here
+google_analytics:
+google_verify:
+# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+bing_verify:
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      false  # publish future dated posts --  true, false (default)
+highlighter: rouge
+markdown:    kramdown
 gems:
-    - jekyll-redirect-from
-    - jekyll-sitemap
-    - jekyll-seo-tag
-    - jekyll-feed
-    - jemoji
-latest_version: 1.2.4
-current_node: 6.1.0
-current_chrome: 51.0.2704.103
-current_v8: 5.1.281.65
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-gist
+  - jekyll-feed
 sass:
-    style: compressed
-available_versions:
-    - v0.0.1
-collections:
-    docs: {output: true, permalink: '/docs/:path/'}
-defaults:
-    - {scope: {type: docs}, values: {layout: docs}}
-    - {scope: {type: posts}, values: {layout: post, permalink: '/blog/:year/:month/:day/:title'}}
-    - {scope: {path: ""}, values: {image: {path: /images/opengraph.png, width: 1200, height: 630}}}
-exclude:
-    - node_modules
-    - README.md
-    - LICENSE.md
-    - CNAME
-    - Gemfile
-    - Gemfile.lock
-    - Gruntfile.js
-    - package.json
-    - script
-    - spec
+  sass_dir: _sass
+  style: compressed
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title/
+
+# Amount of post to show on home page
+paginate: 5
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
+
 include:
-    - _pages
-logo: /images/opengraph.png
+  - .htaccess
+exclude:
+  - "*.less"
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - config
+  - gulpfile.js
+  - lib
+  - log
+  - node_modules
+  - package.json
+  - spec
+  - tmp

@@ -30,15 +30,10 @@ timezone:    America/New_York
 future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
 markdown:    kramdown
-remote_theme: "mmistakes/minimal-mistakes"
+#remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
 
-gems:
-  - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-gist
-  - jekyll-feed
 sass:
   sass_dir: _sass
   style: compressed
@@ -83,3 +78,4 @@ exclude:
   - spec
   - tmp
   - .idea
+  - vendor

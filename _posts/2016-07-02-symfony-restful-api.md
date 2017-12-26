@@ -32,14 +32,14 @@ mv composer.phar /usr/local/bin/composer
    - 在app/AppKernel.php file中添加 `new FOS\RestBundle\FOSRestBundle(),`
    - 在app/config/config.yml->framework 启用serializer属性
 
-        ```
+        ```yaml
         serializer:
             enable_annotations:true
         ```
             
    - 在app/config/config.yml添加如下配置
            
-       ```
+       ```yaml
        fos_rest:
            body_converter:
                enabled: true
@@ -55,7 +55,7 @@ mv composer.phar /usr/local/bin/composer
          
    - 在app/config/routing.yml设置prefix，例子如下：
 
-   ```
+   ```yaml
    clash_api:
        resource: "@ClashApiBundle/Resources/config/routing.yml"
        prefix:   /api
@@ -67,7 +67,7 @@ mv composer.phar /usr/local/bin/composer
  
 5. 创建rest风格的class时，`use FOS\RestBundle\Controller\FOSRestController; `继承 FOSRestController, 例子如下：
     
-    ```
+    ```php
     class PostController extends FOSRestController
     {
         // code something here .....
@@ -77,7 +77,7 @@ mv composer.phar /usr/local/bin/composer
 6. 声明rest api的几种方式：
 - `use FOS\RestBundle\Controller\Annotations; `在function的上方添加注释，例子如下：
 
-    ```   
+    ```php
     /**
      * @Annotations\Get("/posts/category/{id}")
      */
@@ -89,7 +89,7 @@ mv composer.phar /usr/local/bin/composer
 
 - 当直接通过id获取对象时，也可以省略不写，例子如下：
 
-    ```
+    ```php
     public function getPostAction(Post $post)
     {
         // code something here .....
@@ -100,7 +100,7 @@ mv composer.phar /usr/local/bin/composer
 - GET 方法通过查询直接获取对象时，可以通过系列化的方式，返回特定的字段。
     - 现在entity中设置好需要返回的字段
 
-        ```
+        ```php
         /**
          * @ORM\Entity()
          */
@@ -134,7 +134,7 @@ mv composer.phar /usr/local/bin/composer
     
     - 在对应的class里 `use FOS\RestBundle\View\View;` 在function的上方添加注释，例子如下：
 
-        ```
+        ```php
         /**
          * @Annotations\View(serializerGroups={"Default", "ManyPosts"})
          */
@@ -147,7 +147,7 @@ mv composer.phar /usr/local/bin/composer
     
 - POST/PUT/PATCH等方法返回自定义view时，不用注释，在return构建自定义view，例子如下：
 
-    ```
+    ```php
     return $this->handleView(
         new View(
             array(

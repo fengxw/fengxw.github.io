@@ -29,7 +29,7 @@ bing_verify:
 timezone:    America/New_York
 future:      false  # publish future dated posts --  true, false (default)
 highlighter: rouge
-markdown:    maruku
+markdown:    kramdown
 #remote_theme: "mmistakes/minimal-mistakes"
 plugins:
   - jekyll-remote-theme
@@ -44,13 +44,13 @@ permalink:   /:categories/:title/
 # Amount of post to show on home page
 paginate: 5
 
-#kramdown:
-#  input: GFM
-#  auto_ids: true
-#  footnote_nr: 1
-#  entity_output: as_char
-#  toc_levels: 1..6
-#  enable_coderay: false
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  enable_coderay: false
 
 include:
   - .htaccess

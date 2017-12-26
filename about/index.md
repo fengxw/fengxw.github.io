@@ -17,4 +17,4 @@ modified: 2017-12-26
 * And some articles I feel good, and want to share with you.
 * Maybe will write some poetry.
 * But the most important thing is, as a platform to discuss with you.
-* Everything you feel good or not, just tell me by email.
+* Everything you feel good or not, just comments or tell me by email.

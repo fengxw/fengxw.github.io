@@ -1,6 +1,7 @@
 ---
 title:  Linux 给文件及文件夹附权限
 author: fengxw
+tag: [linux]
 ---
 
 权限有三种类型，r（读）、w（写）、x（执行），且每种类型有对应的值：

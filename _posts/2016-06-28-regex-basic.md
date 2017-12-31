@@ -1,12 +1,15 @@
 ---
 title:  Regex Basic
 author: fengxw
+tag: [regex, php]
 ---
 
 This regex base on php syntax
+
 ---
 
 ## 常用正则函数
+
 - preg_match //常用于表达验证
 - preg_match_all
 - preg_replace //常用于过滤非法词汇

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pip 设置国内镜像
+title: pip设置国内镜像
 modified: 2018-01-10
 tags: [python, pip, mirrors]
 image:
@@ -9,13 +9,14 @@ image:
 
 ### 设置方法
 
-1. 配置全局源
+- #### 配置全局源
 
+    在用户目录下创建pip.conf配置文件
     ```console
     $ mkdir ~/.pip && vim ~/.pip/pip.conf
     ```
-
-    pip安装需要使用的https加密，所以在此需要添加trusted-host
+    
+    加入如下配置, pip安装需要使用的https加密, 所以在此需要添加trusted-host
 
     ```
     [global]
@@ -23,7 +24,7 @@ image:
     index-url = http://mirrors.aliyun.com/pypi/simple
     ```
 
-2. 手动指定源
+- #### 手动指定源
 
     ```console
     $ pip -i http://mirrors.aliyun.com/pypi/simple install lxml

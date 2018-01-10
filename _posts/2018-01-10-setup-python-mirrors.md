@@ -7,6 +7,8 @@ image:
   feature: abstract-5.jpg
 ---
 
+### 设置方法
+
 1. 配置全局源
 
     ```console
@@ -27,12 +29,12 @@ image:
     $ pip -i http://mirrors.aliyun.com/pypi/simple install lxml
     ```
 
-3. pip常用国内镜像
+### pip常用国内镜像
 
-    ```
-    http://pypi.douban.com/ 豆瓣
-    http://pypi.sdutlinux.org/ 山东理工大学
-    http://pypi.mirrors.ustc.edu.cn/ 中国科学技术大学
-    http://mirrors.aliyun.com/pypi/simple/ 阿里云
-    https://pypi.tuna.tsinghua.edu.cn/simple/ 清华大学
-    ```
+```
+http://pypi.douban.com/ 豆瓣
+http://pypi.sdutlinux.org/ 山东理工大学
+http://pypi.mirrors.ustc.edu.cn/ 中国科学技术大学
+http://mirrors.aliyun.com/pypi/simple/ 阿里云
+https://pypi.tuna.tsinghua.edu.cn/simple/ 清华大学
+```

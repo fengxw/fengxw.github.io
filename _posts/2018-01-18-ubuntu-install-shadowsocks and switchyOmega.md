@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu install shadowsocks and switchyOmega
-modified: 2018-01-10
+modified: 2018-01-18
 tags: [shadowsocks, switchyomega, ubuntu]
 image:
   feature: abstract-2.jpg

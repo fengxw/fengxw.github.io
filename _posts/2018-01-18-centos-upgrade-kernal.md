@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CentOS upgrade to latest stable kernel
-modified: 2018-01-10
+modified: 2018-01-18
 tags: [linux, kernel, centos]
 image:
   feature: abstract-7.jpg

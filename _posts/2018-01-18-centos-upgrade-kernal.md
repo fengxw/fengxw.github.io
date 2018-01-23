@@ -29,12 +29,12 @@ $ grub2-mkconfig -o /boot/grub2/grub.cfg // enable grub.cfg
 
 ### Take a look the kernels had been installed
 
-   ```bash 
-   $ rpm -qa | grep kernel
-   ```
+```bash 
+$ rpm -qa | grep kernel
+```
    
 ### Clean the useless kernel in the system
 
-   ```bash 
-   $ yum remove kernel-3.10.0-327.el7.x86_64
-   ```
+```bash 
+$ yum remove kernel-3.10.0-327.el7.x86_64
+```

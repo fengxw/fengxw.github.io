@@ -22,7 +22,7 @@ $ sudo apt-get install shadowsocks-qt5
 - password: xxoo
 - Encryption method: AES-256-CFB
 <figure>
-    <img src="http://p2qcii88d.bkt.clouddn.com/2018011808.png" alt="set proxy"><>
+    <img src="http://p2qcii88d.bkt.clouddn.com/2018011808.png" alt="set proxy">
 </figure>
     
 ## 3. Install switchyOmega
